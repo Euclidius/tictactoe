@@ -14,14 +14,14 @@ touch configs/config_client.toml # for client configuration
 
 #or/and
 
-touch configs/config_server.toml
+touch configs/config_server.toml # for server configuration
 ```
 Fill the config files:
 ```toml
 #config_client.toml
 port = 1234
 server_ip = "127.0.0.1"
-log_file = "logs/log_client.txt
+log_file = "logs/log_client.txt"
 
 login = "Alice"
 password = "password1"
