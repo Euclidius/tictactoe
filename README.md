@@ -7,6 +7,10 @@ It runs with simple clients-server architecture. To play you should run server b
 2. [toml11](https://github.com/ToruNiina/toml11)
 
 ## Install 
+Add a log directory:
+```bash
+mkdir logs
+```
 Add a configuration files:
 ```bash
 mkdir configs
