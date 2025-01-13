@@ -100,8 +100,8 @@ void Server::handle_clients() {
                 break;
             }
 
-            move.first = player_move[0] - 0x30;
-            move.second = player_move[1] - 0x30;
+            move.first = player_move[0] - '0';
+            move.second = player_move[1] - '0';
 
             game.make_move(move, move_sign[current_client]);
             game.print_field();
