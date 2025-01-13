@@ -13,7 +13,7 @@
 #include "client.h"
 #include "cryptography.h"
 
-Client::Client(const char* config_file): player(config_file) {
+Client::Client(const std::string& config_file): player(config_file) {
     parse_config(config_file);
     client_fd = socket(AF_INET, SOCK_STREAM, 0);
     server_addr = new_sockaddr(port, server_ip);

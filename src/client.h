@@ -16,7 +16,7 @@ enum auth_e {
 
 class Client {
 public:
-    Client(const char* config_file);
+    Client(const std::string& config_file);
 
     ~Client();
 
