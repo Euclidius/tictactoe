@@ -22,13 +22,14 @@ GameState Game::check_win(std::pair<char, char> moved_position) {
      * checks:
      * for horizontal line
      * for vertical line
-     * for diagonal line
+     * for main diagonal line
+     * for minor diagonal line
      */
     if (
             (get_sign(moved_position) == get_sign((moved_position.first + 1) % 3, moved_position.second) && get_sign(moved_position) == get_sign((moved_position.first + 2) % 3, moved_position.second)) ||
             (get_sign(moved_position) == get_sign(moved_position.first, (moved_position.second + 1) % 3) && get_sign(moved_position) == get_sign(moved_position.first, (moved_position.second + 2) % 3)) ||
-            (get_sign(moved_position) == get_sign((moved_position.first + 1) % 3, (moved_position.second + 1) % 3) && get_sign(moved_position) == get_sign((moved_position.first + 2) % 3, (moved_position.second + 2) % 3)) ||
-            (get_sign(moved_position) == get_sign((moved_position.first + 1) % 3, (moved_position.second - 1) % 3) && get_sign(moved_position) == get_sign((moved_position.first + 2) % 3, (moved_position.second - 2) % 3))
+            ((moved_position.first == moved_position.second) && get_sign(moved_position) == get_sign((moved_position.first + 1) % 3, (moved_position.second + 1) % 3) && get_sign(moved_position) == get_sign((moved_position.first + 2) % 3, (moved_position.second + 2) % 3)) ||
+            ((moved_position.first + moved_position.second == 4) && get_sign(moved_position) == get_sign((moved_position.first + 1) % 3, (moved_position.second - 1) % 3) && get_sign(moved_position) == get_sign((moved_position.first + 2) % 3, (moved_position.second - 2) % 3))
        ) {
         win_state = true;
     }
