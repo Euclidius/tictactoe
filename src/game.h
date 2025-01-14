@@ -67,7 +67,6 @@ public:
     }
 
     void print_field();
-    void play();
 
 private:
     std::array<char, 9> field;
